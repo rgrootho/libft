@@ -6,7 +6,7 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/25 21:48:50 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/01/30 13:13:40 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/03/30 11:04:04 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	lens1 = ft_strlen(s1);
 	lens2 = ft_strlen(s2);
 	totlen = lens1 + lens2;
-	concat = (char*)malloc((totlen + 1) * sizeof(char));
+	concat = (char *)malloc((totlen + 1) * sizeof(char));
 	if (concat == 0)
 		return (0);
 	ft_strlcpy(concat, s1, (lens1 + 1));

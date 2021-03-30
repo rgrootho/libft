@@ -6,7 +6,7 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/25 14:17:32 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/01/28 18:39:18 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/03/30 11:17:14 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *substr;
+	char	*substr;
 
 	if (s == 0)
 		return (0);
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		len = ft_strlen(s) - start;
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
-	substr = (char*)malloc(len + 1 * sizeof(char));
+	substr = (char *)malloc(len + 1 * sizeof(char));
 	if (substr == 0)
 		return (0);
 	ft_memcpy(substr, (s + start), len);

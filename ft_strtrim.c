@@ -6,7 +6,7 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/10 13:14:56 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/01/30 13:25:03 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/03/30 11:16:32 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 static size_t	fronttrim(char const *s1, char const *set, size_t setindex)
 {
-	size_t i;
-	size_t sires;
+	size_t	i;
+	size_t	sires;
 
 	i = 0;
 	sires = setindex;
@@ -35,9 +35,9 @@ static size_t	fronttrim(char const *s1, char const *set, size_t setindex)
 
 static size_t	backtrim(char const *s1, char const *set, size_t setindex)
 {
-	size_t i;
-	size_t sires;
-	size_t strlen;
+	size_t	i;
+	size_t	sires;
+	size_t	strlen;
 
 	i = 0;
 	sires = setindex;
@@ -55,7 +55,7 @@ static size_t	backtrim(char const *s1, char const *set, size_t setindex)
 	return (strlen);
 }
 
-char			*ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	setlen;
 	size_t	start;
@@ -69,14 +69,14 @@ char			*ft_strtrim(char const *s1, char const *set)
 	end = backtrim(s1, set, setlen);
 	if (start > end)
 	{
-		strcopy = (char*)malloc(sizeof(char));
+		strcopy = (char *)malloc(sizeof(char));
 		if (!strcopy)
 			return (0);
 		strcopy[0] = '\0';
 	}
 	else
 	{
-		strcopy = (char*)malloc((end - start + 1) * sizeof(char));
+		strcopy = (char *)malloc((end - start + 1) * sizeof(char));
 		if (!strcopy)
 			return (0);
 		ft_strlcpy(strcopy, s1 + start, end - start + 1);

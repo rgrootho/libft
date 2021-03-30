@@ -4,7 +4,7 @@ char	**ft_split(char const *s, char c);
 
 int main(void)
 {
-	char const s[] = "";
+	char const s[] = "joepie de poepie";
 	char c = ' ';
 	char **array;
 
