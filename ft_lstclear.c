@@ -6,7 +6,7 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/05 14:41:14 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/04/05 15:55:53 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/04/13 18:28:28 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,5 +28,5 @@ void ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	ft_lstdelone(*lst, del);
 	*lst = NULL;
-	return;
+	return ;
 }
