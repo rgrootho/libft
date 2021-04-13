@@ -15,9 +15,6 @@
 
 char	*prutzooi(char *chrstr, size_t intlen, int n)
 {
-	chrstr = (char*)malloc((intlen + 1) * sizeof(char));
-	if (chrstr == 0)
-		return (0);
 	chrstr[intlen] = '\0';
 	intlen--;
 	if (n < 0)
@@ -59,5 +56,8 @@ char	*ft_itoa(int n)
 	}
 	if (n < 0)
 		intlen++;
+		chrstr = (char*)malloc((intlen + 1) * sizeof(char));
+	if (chrstr == 0)
+		return (0);
 	return (prutzooi(chrstr, intlen, n));
 }

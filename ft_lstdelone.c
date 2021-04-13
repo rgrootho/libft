@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_lstnew.c                                        :+:    :+:            */
+/*   ft_lstdelone.c                                     :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/03/30 11:22:28 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/04/02 16:22:56 by rgrootho      ########   odam.nl         */
+/*   Created: 2021/04/05 13:29:07 by rgrootho      #+#    #+#                 */
+/*   Updated: 2021/04/05 14:37:11 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-t_list *ft_lstnew(void *content)
+void ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	t_list	*kaas;
+	if (!del || !lst)
+		return ;
 
-	kaas = (t_list *)malloc(sizeof(t_list));
-	if (kaas == 0)
-		return (NULL);
-	kaas->content = content;
-	kaas->next = NULL;
-	return (kaas);
+	del(lst->content);
+	free(lst);
+	return ;
 }

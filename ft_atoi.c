@@ -6,7 +6,7 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 22:48:03 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/03/26 13:17:34 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/04/04 22:57:35 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_atoi(const char *str)
 	i = 0;
 	tot = 0;
 	neg = 0;
-	i = check_for_spaces;
+	i = check_for_spaces(str, i);
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
