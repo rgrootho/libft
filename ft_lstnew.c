@@ -6,14 +6,14 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/30 11:22:28 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/04/02 16:22:56 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/04/18 21:28:22 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-t_list *ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
 	t_list	*kaas;
 
