@@ -6,7 +6,7 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/20 15:38:47 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/04/20 16:51:24 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/04/20 17:38:27 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ static int	nlen(int n)
 		n = n / 10;
 		i++;
 	}
-	while (i > 0)
+	while (i > 1)
 	{
 		pow = pow * 10;
 		i--;
 	}
-	return (pow / 10);
+	return (pow);
 }
 
 void	ft_putnbr_fd(int n, int fd)
