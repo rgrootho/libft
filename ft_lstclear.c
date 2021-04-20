@@ -6,16 +6,16 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/04/05 14:41:14 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/04/13 18:28:28 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/04/18 21:33:35 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-void ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	t_list *duim;
+	t_list	*duim;
 
 	if (!lst || !*lst || !del)
 		return ;

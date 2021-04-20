@@ -6,7 +6,7 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/26 15:27:31 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/02/19 14:59:28 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/04/18 21:25:13 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	*ft_itoa(int n)
 	}
 	if (n < 0)
 		intlen++;
-		chrstr = (char*)malloc((intlen + 1) * sizeof(char));
+	chrstr = (char*)malloc((intlen + 1) * sizeof(char));
 	if (chrstr == 0)
 		return (0);
 	return (prutzooi(chrstr, intlen, n));

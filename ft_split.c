@@ -6,7 +6,7 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/03/25 23:12:03 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/03/30 17:10:02 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/04/18 19:21:15 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,8 @@ char	**ft_split(char const *s, char c)
 	char	**pp;
 	int		wordlen;
 
+	if (!s || !c)
+		return (0);
 	wordlen = 0;
 	pp = pp_len(s, c);
 	if (pp == 0)
