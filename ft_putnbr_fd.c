@@ -5,44 +5,18 @@
 /*                                                     +:+                    */
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/04/20 15:38:47 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/04/20 17:38:27 by rgrootho      ########   odam.nl         */
+/*   Created: 2021/04/26 14:21:44 by rgrootho      #+#    #+#                 */
+/*   Updated: 2021/04/26 16:17:55 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-static int	nlen(int n)
-{
-	int	i;
-	int	pow;
-
-	i = 0;
-	pow = 1;
-	while (n > 0)
-	{
-		n = n / 10;
-		i++;
-	}
-	while (i > 1)
-	{
-		pow = pow * 10;
-		i--;
-	}
-	return (pow);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	num2char;
-	int		pow;
+	char	nchar;
 
-	if (n == 0)
-	{
-		write(fd, "0", 1);
-		return ;
-	}
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
@@ -50,14 +24,20 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n < 0)
 	{
-		write(1, "-", 1);
+		write(fd, "-", 1);
 		n = n * -1;
 	}
-	pow = nlen(n);
-	num2char = n / (pow) + '0';
-	write(fd, &num2char, 1);
-	n = n % pow;
-	if (n > 0)
-		ft_putnbr_fd(n, fd);
-	return ;
+	if (n < 10)
+	{
+		nchar = n + '0';
+		write(fd, &nchar, 1);
+		return ;
+	}
+	else
+	{
+		ft_putnbr_fd((n / 10), fd);
+		nchar = (n % 10) + '0';
+		write(fd, &nchar, 1);
+		return ;
+	}
 }

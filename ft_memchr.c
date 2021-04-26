@@ -6,7 +6,7 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/05 13:32:46 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/03/26 13:31:35 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/04/26 16:44:12 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		else
 			i++;
 	}
-	return (0);
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 07:46:31 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/02/25 12:12:17 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/04/26 16:33:30 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		*(char*)(s + i) = 0;
+		*(char *)(s + i) = NULL;
 		i++;
 	}
 }
