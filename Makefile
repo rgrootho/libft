@@ -6,7 +6,7 @@
 #    By: rgrootho <marvin@codam.nl>                   +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/13 11:32:58 by rgrootho      #+#    #+#                  #
-#    Updated: 2020/11/19 17:11:53 by rgrootho      ########   odam.nl          #
+#    Updated: 2021/04/26 18:45:01 by rgrootho      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 NAME = libft.a
@@ -21,7 +21,7 @@ $(NAME): *.o
 	ar rc $@ $^
 
 %.o: %.c $(HEADER)
-	$(CC) $(FLAGS) -c $^
+	$(CC) $(FLAGS) -c $<
 
 clean:
 	$(REMOVE) *.o
