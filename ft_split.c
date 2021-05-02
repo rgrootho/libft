@@ -24,7 +24,7 @@ static int	free_swp(char **splt_wrd_p, int j)
 	return (0);
 }
 
-static char	*set_word_in_pp(char const *s, int i, int wordlen)
+static char	*set_word_in_swp(char const *s, int i, int wordlen)
 {
 	char	*a;
 
@@ -48,7 +48,7 @@ static char	**cnt_wrdlen(char const *s, char c, char **splt_wrd_p, int wordlen)
 			wordlen++;
 		if ((s[i] != c && s[i + 1] == c) || (s[i] != c && s[i + 1] == '\0'))
 		{
-			splt_wrd_p[j] = set_word_in_pp(s, i, wordlen + 1);
+			splt_wrd_p[j] = set_word_in_swp(s, i, wordlen + 1);
 			if (splt_wrd_p[j] == 0)
 			{
 				free_swp(splt_wrd_p, j - 1);
