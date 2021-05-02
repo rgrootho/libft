@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-char	*prutzooi(char *chrstr, size_t intlen, int n)
+static char	*int_2_char(char *chrstr, size_t intlen, int n)
 {
 	chrstr[intlen] = '\0';
 	intlen--;
@@ -59,5 +59,5 @@ char	*ft_itoa(int n)
 	chrstr = (char *)malloc((intlen + 1) * sizeof(char));
 	if (chrstr == 0)
 		return (0);
-	return (prutzooi(chrstr, intlen, n));
+	return (int_2_char(chrstr, intlen, n));
 }
