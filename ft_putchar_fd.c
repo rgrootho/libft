@@ -9,7 +9,7 @@
 /*   Updated: 2021/03/26 13:38:01 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-#include "libft.h"
+
 #include <unistd.h>
 
 void	ft_putchar_fd(char c, int fd)
