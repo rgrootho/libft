@@ -6,7 +6,7 @@
 /*   By: rgrootho <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/10 13:14:56 by rgrootho      #+#    #+#                 */
-/*   Updated: 2021/03/30 11:16:32 by rgrootho      ########   odam.nl         */
+/*   Updated: 2021/05/08 13:49:27 by rgrootho      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,9 @@ static size_t	fronttrim(char const *s1, char const *set, size_t setindex)
 
 static size_t	backtrim(char const *s1, char const *set, size_t setindex)
 {
-	size_t	i;
 	size_t	sires;
 	size_t	strlen;
 
-	i = 0;
 	sires = setindex;
 	strlen = ft_strlen(s1);
 	while (strlen != 0 && setindex != 0)
